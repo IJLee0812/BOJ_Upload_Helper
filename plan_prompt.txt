@@ -1,0 +1,25 @@
+Reference Link: https://velog.io/@yoondgu/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EA%B7%B8%EB%8F%99%EC%95%88-%EC%A0%9C%EC%B6%9C%ED%95%9C-%EB%AC%B8%EC%A0%9C-%EB%AA%A8%EB%91%90-%EB%B0%B1%EC%A4%80%ED%97%88%EB%B8%8C-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0
+
+위 링크를 참조해서, pwd에 ./BOJ_Upload_Helper 를 생성해서 기존에 내가 풀었던 백준 문제들을 일정 간격 딜레이를 두고 모두 자동 업로드하는 헬퍼 프로그램을 만들려 한다. 
+
+백준 웹페이지 프로필 -> 맞은 문제에 들어가면 풀었던 문제 목록 모두를 확인할 수 있다.
+
+웹사이트 링크 양식은, https://www.acmicpc.net/user/{username} 이다. 따라서, 프로그램의 일반화를 위해 “[helper] username 입력 : “ 을 통해 username을 입력받게 하면, 그 후 순차적으로 BaekjoonHub를 통한 자동 업로드가 진행되며, 이 현황을 tqdm과 같은 프로그램으로 진행상황을 실시간으로 확인할 수 있도록 하는 프로그램을 제작하려 한다.
+
+예시 케이스로, ikjoon0812를 입력했을 때(https://www.acmicpc.net/user/ikjoon0812), 해당 페이지에 접속하여 아래와 같은 HTML 태그를 타고 찾아내면 맞은 문제 전체를 따올 수 있게 된다.
+
+… (상위 태그들) …
+
+<div class="problem-list"><a href="/problem/1000" class="result-ac">1000</a> <a href="/problem/1001" class="result-ac">1001</a> <a href="/problem/1003" class="result-ac">1003</a> <a href="/problem/1004" class="result-ac">1004</a> 
+
+위 요구사항을 만족시키기 위해서는 python 개발환경이 필요하며, 이는 uv로 설치한다. 
+
+다른 사용자는 pwd 레포지토리를 git clone해서, uv sync만 해주고 uv run helper.py 실행 -> 다른 사용자 백준 username 입력 -> 프로그램 실행 -> BaekjoonHub와 연결한 레포지토리에 자동으로 업로드 완료
+
+위 워크플로우가 실행되어야 한다.
+
+위 요구사항을 모두 만족시키기 위한 프로그램 설계 계획을 짜고, 실행해줘.
+
+(먼저, 내 python 환경을 찾고, pip install uv 로 uv 설치해줘.)
+
+마지막으로 프로그램이 완성되면, ./BOJ_Upload_Helper/README.md 를 만들어서, 프로그램을 간단히 설명하고 다른 사용자들이 해당 프로그램을 사용하기 위해서는 어떠한 절차를 거쳐야 하는지 작성해줘. (맨 처음은, BaekjoonHub 크롬 익스텐션 설치 및 Github 계정 + 원하는 Repository 연동 필요 -> git clone 현 레포지토리 -> python 환경 및 uv 설치 -> uv sync -> uv run helper.py 로 실행)
