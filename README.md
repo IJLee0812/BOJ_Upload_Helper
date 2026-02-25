@@ -18,8 +18,8 @@ https://velog.io/@yoondgu/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%84-%EC%9D%B4%EC%9A%A
 ### 2. 레포지토리 클론
 
 ```bash
-git clone https://github.com/<your-username>/Problem-Solving.git
-cd Problem-Solving/BOJ_Upload_Helper
+git clone https://github.com/<your-username>/BOJ_Upload_Helper.git
+cd BOJ_Upload_Helper
 ```
 
 ### 3. Python 환경 및 uv 설치
@@ -57,16 +57,16 @@ uv run helper.py
 [helper] username 입력 : ikjoon0812
 
 [helper] 'ikjoon0812' 프로필에서 맞은 문제 목록을 가져오는 중...
-[helper] 맞은 문제 42개를 찾았습니다.
-[helper] 문제 목록: 1000, 1001, 1003, 1004, ...
+[helper] 맞은 문제 272개를 찾았습니다.
+[helper] 업로드 대상: 1000, 1001, 1003, ...
 
 [helper] 업로드를 시작하시겠습니까? (y/n) : y
 
-[helper] 총 42개 문제를 업로드합니다.
+[helper] 총 272개 문제를 업로드합니다.
 [helper] 문제당 5초 대기 (BaekjoonHub 업로드 대기)
-[helper] 예상 소요 시간: 약 3분 30초
+[helper] 예상 소요 시간: 약 12분 34초
 
-[helper] 업로드 진행: 100%|██████████████████████| 42/42 [03:30<00:00, 5.00s/문제]
+[helper] 업로드 진행: 100%|██████████████████████| 272/272 [03:30<00:00, 5.00s/문제]
 
 [helper] 모든 문제의 제출 페이지를 열었습니다!
 [helper] BaekjoonHub 업로드가 완료될 때까지 브라우저를 닫지 마세요.
@@ -92,6 +92,7 @@ rm logs/uploaded_{username}.txt
 - **Chrome 브라우저**가 기본 브라우저로 설정되어 있어야 합니다.
 - BaekjoonHub 익스텐션이 **활성화**된 상태여야 합니다.
 - 업로드 중 브라우저를 닫지 마세요.
+- **프로그램 실행 중에는 다른 작업을 하지 않는 것을 권장합니다.** 탭 전환이나 다른 앱 사용 시 브라우저가 백그라운드로 전환되어 BaekjoonHub가 페이지를 정상적으로 처리하지 못할 수 있습니다.
 - 문제당 5초의 딜레이가 있으므로, 문제가 많을 경우 시간이 오래 걸릴 수 있습니다.
 
 ## 개발 도구
